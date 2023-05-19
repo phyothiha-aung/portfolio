@@ -137,8 +137,15 @@ const Navbar = () => {
         {/* menu */}
         <ul className="hidden text-sm sm:flex">
           {["Home", "About", "Skills", "Works", "Contact"].map((navItem) => (
-            <Link key={navItem} to={navItem} smooth={true} duration={500}>
-              <li className="hover:text-cyan-300 duration-400">{navItem}</li>
+            <Link
+              key={navItem}
+              activeClass="active"
+              to={navItem}
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              <li className="hover:text-cyan-400 duration-400">{navItem}</li>
             </Link>
           ))}
         </ul>
