@@ -49,7 +49,7 @@ const Home = () => {
               <span className="hidden sm:inline">| React Native</span>
             </p>
             <div>
-              <Link to="Work" smooth={true} duration={500}>
+              <Link to="Works" smooth={true} duration={500}>
                 <button className="text-white group border-2 px-6 py-3 my-2 flex items-center border-cyan-300 hover:bg-cyan-400 hover:border-cyan-300 fadeInBackWards">
                   View Work
                   <span className="group-hover:rotate-90 duration-300">
