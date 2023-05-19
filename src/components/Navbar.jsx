@@ -145,7 +145,9 @@ const Navbar = () => {
               smooth={true}
               duration={500}
             >
-              <li className="hover:text-cyan-400 duration-400">{navItem}</li>
+              <li className="hover:text-cyan-400 duration-400 font-semibold">
+                {navItem}
+              </li>
             </Link>
           ))}
         </ul>
