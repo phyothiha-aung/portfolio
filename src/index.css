@@ -2,21 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@import "animate.css";
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Satisfy&display=swap");
 
 @layer base {
   body {
     @apply font-[Raleway];
   }
   li {
-    @apply px-4;
-    @apply cursor-pointer;
-  }
-  .logo {
-    @apply font-[Satisfy];
-    @apply text-[22px];
-    @apply tracking-widest;
+    @apply px-4 cursor-pointer;
   }
 }
 
@@ -33,4 +27,27 @@
     rgba(112, 157, 255, 0.6),
     hsla(242, 74%, 61%, 0.6)
   ) !important;
+}
+
+.hover-animation {
+  display: inline-block;
+  min-width: 10px;
+  animation-fill-mode: both;
+}
+
+.hover-animation:hover {
+  animation: rubberBand 1s;
+  @apply text-cyan-400;
+}
+
+.text-animation {
+  min-width: 10px;
+  display: inline-block;
+  opacity: 0;
+  animation: bounceIn 1s;
+  animation-fill-mode: forwards;
+}
+
+.fadeInBackWards {
+  animation: fadeIn 1s 0.6s backwards;
 }
