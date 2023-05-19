@@ -25,7 +25,7 @@ const Home = () => {
             <h1 className="max-[470px]:text-4xl text-5xl sm:text-6xl font-bold text-[#ccd6f6]">
               Phyo Thiha Aung
             </h1>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-bold text-[#8892b0] my-3">
+            <h2 className="text-2xl sm:text-4xl md:text-5xl min-[873]:text-6xl min-[1005px]:text-7xl font-bold text-[#8892b0] my-3">
               I'm a{" "}
               <TypeAnimation
                 cursor={true}
