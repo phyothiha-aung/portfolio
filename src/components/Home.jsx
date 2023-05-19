@@ -2,7 +2,6 @@ import React from "react";
 import { HiArrowNarrowRight } from "react-icons/hi";
 import { Link } from "react-scroll";
 import { motion } from "framer-motion";
-import { fadeIn } from "../variants";
 import { TypeAnimation } from "react-type-animation";
 
 const Home = () => {
@@ -11,10 +10,10 @@ const Home = () => {
       {/* Container */}
       <div className="max-w-[1000px] mx-auto px-8 h-full flex flex-col justify-center">
         <motion.div
-          variants={fadeIn("right", 0.3)}
-          initial="hidden"
-          whileInView={"show"}
-          viewport={{ once: false, amount: 0.7 }}
+          initial={{ opacity: 0 }} // Initial opacity value
+          animate={{ opacity: 1 }} // Target opacity value
+          transition={{ duration: 3 }} // Transition duration in seconds
+          viewport={{ once: true, amount: 1 }}
           className="flex flex-col justify-center"
         >
           <p className="text-cyan-400">Hi, my name is</p>
