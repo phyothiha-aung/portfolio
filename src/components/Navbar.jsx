@@ -166,12 +166,14 @@ const Navbar = () => {
           }
         >
           {["Home", "About", "Skills", "Works", "Contact"].map((navItem) => (
-            <li key={navItem} className="py-6 text-4xl">
+            <li key={navItem} className="py-6 text-4xl hover:text-cyan-400">
               <Link
                 onClick={handleClick}
                 to={navItem}
                 smooth={true}
                 duration={500}
+                spy={true}
+                activeClass="active"
               >
                 {navItem}
               </Link>

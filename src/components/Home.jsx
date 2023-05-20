@@ -16,7 +16,7 @@ const Home = () => {
       <div className="max-w-[1000px] mx-auto px-1 min-[450px]:px-4 md:px-8 h-full flex flex-row min-[450px]:gap-3 md:gap-5">
         <div className="flex flex-col justify-center items-center md:pr-8">
           <div className="h-7 w-7 rounded-full bg-cyan-400" />
-          <div className="h-80 w-1 bg-cyan-400" />
+          <div className="h-80 w-1 bg-gradient-to-b from-cyan-400" />
         </div>
         <div className="flex flex-col justify-center">
           <div className="flex flex-col justify-center">
