@@ -84,7 +84,7 @@ const Contact = () => {
                 target="_blank"
                 rel="noreferrer"
                 className="flex justify-between items-center w-full text-gray-300"
-                href="https://docs.google.com/document/d/1g-mvuM7OmpWRCJGFYLURURWAnN96OZ4J7kqJO_9-kR8/edit?usp=sharing"
+                href="https://drive.google.com/file/d/11eizAnXQKiAStDa6q6TrQnbXKp7Mfk3q/view?usp=share_link"
               >
                 <BsFillPersonLinesFill
                   size={20}
