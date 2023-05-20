@@ -20,7 +20,7 @@ const Home = () => {
         </div>
         <div className="flex flex-col justify-center">
           <div className="flex flex-col justify-center">
-            <p className="text-cyan-400">Hi, my name is</p>
+            <p className="text-cyan-300">Hi, my name is</p>
             <h1 className="max-[470px]:text-4xl text-5xl sm:text-6xl font-bold text-[#ccd6f6]">
               {"Phyo Thiha Aung".split("").map((c, i) => (
                 <span
@@ -50,7 +50,7 @@ const Home = () => {
             </p>
             <div>
               <Link to="Works" smooth={true} duration={500}>
-                <button className="text-white group border-2 px-6 py-3 my-2 flex items-center border-cyan-300 hover:bg-cyan-400 hover:border-cyan-300 fadeInBackWards">
+                <button className="text-white group border-2 px-6 py-3 my-2 flex items-center border-cyan-300 hover:bg-cyan-400 fadeInBackWards">
                   View Work
                   <span className="group-hover:rotate-90 duration-300">
                     <HiArrowNarrowRight className="ml-3 " />

@@ -12,11 +12,11 @@ const Navbar = () => {
   return (
     <div className="fixed w-full   bg-[#0a192f] text-gray-300 ">
       <div className="max-w-[1200px] flex justify-between items-center mx-auto px-4 h-[60px]">
-        <div className="h-[45px] w-[100px]">
+        <div className="h-[45px] w-[100px] text-cyan-300">
           <svg
             xmlns="http://www.w3.org/2000/svg"
             version="1.1"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "100%", height: "100%", fill: "#67e8f9" }}
             viewBox="0 0 1000 623"
           >
             <g transform="matrix(1,0,0,1,-0.6060606060606233,0.2522267206477409)">
