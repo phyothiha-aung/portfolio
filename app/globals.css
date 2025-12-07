@@ -7,7 +7,7 @@
 @theme {
   --color-background: hsl(210, 10%, 12%);
   --color-primary: hsl(187 97.7% 65.9%);
-  --color-secondary: hsl(7 97.7% 65.9%);
+  --color-secondary: hsl(7 60% 40%);
 }
 
 body {
@@ -15,5 +15,211 @@ body {
 }
 
 .app-container {
-  @apply w-full max-w-7xl mx-auto px-5;
+  @apply xl:max-w-screen-2xl mx-auto;
+}
+
+/* LOGO style and animation */
+.logo {
+  height: 3rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  perspective: 600px;
+
+  .circle {
+    width: 2.75rem;
+    height: 2.75rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 50%;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 1rem;
+      height: 1.5rem;
+      right: -0.5rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: var(--color-background);
+    }
+  }
+
+  .text {
+    color: var(--color-primary);
+    font-size: 1.5rem;
+    line-height: 1.1em;
+    font-family: serif;
+    font-weight: 600;
+    position: absolute;
+    left: 0.875rem;
+    width: 3rem;
+    height: 1.5rem;
+
+    transform-style: preserve-3d;
+    transform-origin: center;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .front,
+  .back {
+    position: absolute;
+    width: 100%;
+    width: 3rem;
+    height: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backface-visibility: hidden;
+  }
+
+  .front {
+    transform: rotateX(0deg) translateZ(10px);
+  }
+
+  .back {
+    transform: rotateX(-90deg) translateZ(10px);
+  }
+
+  &:hover .text {
+    transform: rotateX(90deg);
+  }
+}
+
+/* NAV style */
+.nav-item-group {
+  @apply flex items-center gap-6;
+
+  .nav-item {
+    @apply text-primary transition-colors duration-300 cursor-pointer;
+  }
+}
+
+/* NAME SVG style and animation */
+svg.my-name path {
+  fill: transparent;
+  stroke: var(--color-primary);
+  stroke-width: 0.1;
+  stroke-dasharray: 66;
+  stroke-dashoffset: 66;
+  animation: name-animation 4s ease-in-out forwards;
+}
+
+@keyframes name-animation {
+  0% {
+    stroke-dashoffset: 60;
+  }
+  40% {
+    fill: transparent;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    fill: var(--color-primary);
+  }
+}
+
+ul.badge-container {
+  @apply flex items-center gap-2 mt-8;
+
+  li {
+    @apply h-8.5 p-0;
+    .badge-item {
+      @apply flex items-center bg-secondary text-white px-5 pb-1 h-full rounded-full text-sm font-medium;
+      transition: all 0.3s ease-in-out;
+      &:hover {
+        @apply bg-secondary/80;
+      }
+    }
+  }
+}
+
+.scroller {
+  @apply absolute bottom-5 left-1/2 -translate-x-1/2 w-7 h-12 border border-white/90 rounded-full py-2;
+
+  &::after {
+    content: "";
+    @apply block w-1 h-1 bg-white rounded-full mx-auto;
+    animation: scroll-animation 2s infinite;
+  }
+}
+
+@keyframes scroll-animation {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(1.5rem);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.gradient-text {
+  background: linear-gradient(
+    -40deg,
+    var(--color-white) 0%,
+    var(--color-white) 40%,
+    var(--color-primary) 50%,
+    var(--color-white) 60%,
+    var(--color-white) 100%
+  );
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 200%;
+  white-space: nowrap;
+  animation: background-pan 3s linear infinite;
+}
+
+@keyframes background-pan {
+  from {
+    background-position: 0% center;
+  }
+  to {
+    background-position: -200% center;
+  }
+}
+
+.sparkle {
+  --size: clamp(20px, 1.5vw, 30px);
+  display: block;
+  position: absolute;
+  width: var(--size);
+  height: var(--size);
+  pointer-events: none;
+  animation: sparkle-fade 0.7s ease forwards;
+}
+
+.sparkle svg {
+  display: block;
+  animation: sparkle-rotate 1s linear forwards;
+}
+
+@keyframes sparkle-fade {
+  from,
+  to {
+    transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+  }
+}
+
+@keyframes sparkle-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(180deg);
+  }
+}
+
+@media (prefer-reduced-motion: reduce) {
+  .sparkle {
+    display: none;
+  }
 }
