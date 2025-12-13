@@ -4,10 +4,15 @@ import { Open_Sans } from "next/font/google";
 import Navbar from "@/components/Navbar";
 
 export const metadata: Metadata = {
-  title: "Phyo Thiha Aung's Portfolio",
+  title: {
+    default: "Phyo Thiha Aung | Frontend Developer",
+    template: "%s | Phyo Thiha Aung",
+  },
   description:
-    "Phyo Thiha Aung is a talented frontend developer with a passion for creating beautiful and functional website and mobile applications.",
-  manifest: "/manifest.json",
+    "Phyo Thiha Aung is a Frontend developer with 3+ years experience in React, Next.js, React Native, and modern UI development.",
+  verification: {
+    google: "200xp3Mw8naByKFhXJ5bvqozTHHipljwTYkM6JYkRp0",
+  },
 };
 
 const openSans = Open_Sans({

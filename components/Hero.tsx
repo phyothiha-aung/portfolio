@@ -23,6 +23,9 @@ const Hero = () => {
             className="text-primary w-4/5 aspect-153/19 mt-0.5 relative"
             aria-label="Phyo Thiha Aung"
           >
+            <span className="sr-only">
+              Phyo Thiha Aung - Frontend Developer
+            </span>
             <svg
               style={{ width: "100%", height: "100%" }}
               viewBox="0 0 153 19"
