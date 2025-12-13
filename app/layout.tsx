@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 export const metadata: Metadata = {
   title: "Phyo Thiha Aung's Portfolio",
   description:
-    "Phyo Thiha Aung is a talented frontend developer with a passion for creating beautiful and functional web applications.",
+    "Phyo Thiha Aung is a talented frontend developer with a passion for creating beautiful and functional website and mobile applications.",
   manifest: "/manifest.json",
 };
 

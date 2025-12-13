@@ -1,22 +1,39 @@
-const links = ["Home", "About", "Projects", "Contact"];
+import Link from "next/link";
+
+const links = [
+  { href: "/", label: "Home" },
+  { href: "#about", label: "About" },
+  { href: "#projects", label: "Projects" },
+  { href: "#experience", label: "Experience" },
+  { href: "#skills", label: "Skills" },
+];
 
 const Navbar = () => {
   return (
-    <div className="w-full fixed">
-      <nav className="app-container h-17 flex items-center justify-between top-0 z-50 px-5 sm:px-10 md:px-16 lg:px-24">
-        <div className="logo">
+    <div className="w-full fixed bg-background z-50">
+      <nav className="app-container h-17 flex items-center justify-between top-0">
+        <Link href="/" className="logo">
           <div className="circle" />
-          <div className="text">
-            <span className="front">PTA</span>
-            <span className="back">PTA</span>
+          <div className="text" aria-label="Phyo Thiha Aung">
+            <span className="front" aria-hidden>
+              PTA
+            </span>
+            <span className="back" aria-hidden>
+              PTA
+            </span>
           </div>
-        </div>
+        </Link>
 
         <ul className="nav-item-group">
           {links.map((item) => (
-            <li key={item} className="nav-item">
-              {item}
-            </li>
+            <Link
+              href={item.href}
+              key={item.href}
+              aria-label={item.label}
+              className="nav-item"
+            >
+              {item.label}
+            </Link>
           ))}
         </ul>
       </nav>

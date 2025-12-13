@@ -1,5 +1,5 @@
 {
-  "short_name": "PTA's Protfolio",
+  "short_name": "Phyo Thiha Aung's Protfolio",
   "name": "Phyo Thiha Aung's Portfolio",
   "icons": [
     {
@@ -20,6 +20,6 @@
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "theme_color": "hsl(187 97.7% 65.9%)",
+  "background_color": "hsl(210, 10%, 12%)"
 }

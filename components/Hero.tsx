@@ -1,7 +1,8 @@
 import Link from "next/link";
 import Sparkle from "./Sparkle";
+import ScrollIndicator from "./ScrollIndicator";
 
-const budges = [
+const badges = [
   { name: "TypeScript", href: "https://www.typescriptlang.org/" },
   { name: "React", href: "https://react.dev/" },
   { name: "React Native", href: "https://reactnative.dev/" },
@@ -9,7 +10,7 @@ const budges = [
 
 const Hero = () => {
   return (
-    <div className="min-h-screen pt-17 flex flex-col items-center justify-center">
+    <section className="min-h-dvh pt-17 flex flex-col items-center justify-center px-5">
       <div className="w-full max-w-[1000px] flex items-center justify-center">
         <div className="w-1/8 flex flex-col justify-center items-center md:pr-8">
           <div className="h-7 w-7 rounded-full bg-primary" />
@@ -35,17 +36,17 @@ const Hero = () => {
               />
             </svg>
           </h1>
-          <div className="text-base text-white/70 mt-1">
-            <span className="gradient-text font-semibold tracking-tight text-xl md:text-2xl lg:text-4xl">
+          <div className="text-base text-white/70 mt-1.5">
+            <h2 className="gradient-text text-white/80 font-semibold tracking-tight text-xl md:text-2xl lg:text-3xl">
               Frontend Developer
-            </span>{" "}
-            <span className="whitespace-nowrap text-sm sm:text-base">
-              who build modern applications with latest JavaScript ecosystem.
-            </span>
+            </h2>{" "}
+            <p className="text-sm sm:text-base">
+              who builds modern applications with latest JavaScript ecosystem.
+            </p>
           </div>
 
           <ul className="badge-container">
-            {budges.map((badge) => (
+            {badges.map((badge) => (
               <li key={badge.name}>
                 <Link
                   href={badge.href}
@@ -61,8 +62,8 @@ const Hero = () => {
         </div>
       </div>
 
-      <Link href="#" className="scroller" />
-    </div>
+      <ScrollIndicator />
+    </section>
   );
 };
 
