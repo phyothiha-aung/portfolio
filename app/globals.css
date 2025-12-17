@@ -5,7 +5,7 @@
 }
 
 @theme {
-  --color-background: hsl(210, 10%, 12%);
+  --color-background: #0a0a0a;
   --color-primary: hsl(187 97.7% 65.9%);
   --color-secondary: hsl(7 60% 40%);
 }
@@ -102,7 +102,7 @@ svg.my-name path {
   stroke-width: 0.1;
   stroke-dasharray: 66;
   stroke-dashoffset: 66;
-  animation: name-animation 4s ease-in-out forwards;
+  animation: name-animation 3s ease-in-out forwards;
 }
 
 @keyframes name-animation {
