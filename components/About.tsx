@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import PROFILE from "@/assets/images/profile.webp";
 import contact from "@/assets/data/contact";
+import { BiDownload } from "react-icons/bi";
 
 const calculateAge = (
   birthYear: number,
@@ -27,7 +28,7 @@ const About = () => {
       id="about"
       className="min-h-screen w-full flex items-center py-20 bg-neutral-950"
     >
-      <div className="container mx-auto px-6">
+      <div className="app-container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
           <div className="relative group w-full max-w-[400px] aspect-square md:aspect-4/5 flex-1">
             <div className="border-2 border-primary/20 rounded-3xl p-4 w-full h-full">
@@ -52,7 +53,7 @@ const About = () => {
 
             <div className="space-y-4 text-lg leading-relaxed">
               <p>
-                I am{" "}
+                My name is{" "}
                 <span className="text-white font-semibold">
                   Phyo Thiha Aung
                 </span>
@@ -74,40 +75,29 @@ const About = () => {
               </p>
 
               <p>
-                I don’t just write code—I build digital experiences that are
-                intuitive, reliable, and polished from the ground up.
+                I don&apos;t just write code. I build digital experiences that
+                are intuitive, reliable, and polished from the ground up.
               </p>
             </div>
 
-            <div className="flex flex-wrap gap-3 pt-4">
-              {/* <Link
-                href={contact[0].href}
-                title="Download Resume"
-                className="flex items-center gap-2 text-sm px-3 rounded-md text-primary hover:text-white bg-secondary "
+            <div className="flex flex-wrap gap-3 pt-4 items-center">
+              <Link
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="download resume"
+                className="flex items-center gap-2 bg-primary/30 hover:bg-primary/40 text-primary px-4 py-2 rounded-md font-medium transition"
               >
-                <span>Download Resume</span>
-                <Image
-                  src={contact[0].icon}
-                  alt={contact[0].name}
-                  width={20}
-                  height={20}
-                  className="aspect-square h-full object-contain"
-                />
-              </Link> */}
-              {contact.map((item) => (
+                Resume <BiDownload size={18} />
+              </Link>
+              {contact.splice(1, 3).map((item) => (
                 <Link
                   href={item.href}
                   key={item.name}
                   title={item.name}
                   className="w-10 aspect-square flex items-center justify-center"
                 >
-                  <Image
-                    src={item.icon}
-                    alt={item.name}
-                    width={20}
-                    height={20}
-                    className="w-full h-full object-cover"
-                  />
+                  {item.icon()}
                 </Link>
               ))}
             </div>

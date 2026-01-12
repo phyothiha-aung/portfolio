@@ -19,7 +19,8 @@ const Hero = () => {
         <div className="w-7/8 relative">
           <Sparkle />
           <p className="text-white/70 text-sm sm:text-base">
-            Hi! I'am <span className="w-0 h-0 opacity-0">Phyo Thiha Aung</span>
+            Hi! I&apos;am{" "}
+            <span className="w-0 h-0 opacity-0">Phyo Thiha Aung</span>
           </p>
           <h1
             className="text-primary w-full sm:w-4/5 aspect-153/19 mt-0.5 relative"
