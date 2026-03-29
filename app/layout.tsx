@@ -1,7 +1,10 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import { Open_Sans } from "next/font/google";
+import { Open_Sans, Exo_2 } from "next/font/google";
 import Navbar from "@/components/Navbar";
+import gsap from "gsap";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const metadata: Metadata = {
   title: {
@@ -24,6 +27,17 @@ const openSans = Open_Sans({
   variable: "--font-open-sans",
 });
 
+const exo2 = Exo_2({
+  subsets: ["latin"],
+  display: "swap",
+  weight: ["400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
+  fallback: ["system-ui", "sans-serif"],
+  variable: "--font-exo-2",
+});
+
+gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -32,7 +46,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${openSans.variable} ${openSans.className} antialiased w-full`}
+        className={`${exo2.variable} ${openSans.variable} ${openSans.className} antialiased w-full scrollbar-none`}
       >
         <Navbar />
         {children}

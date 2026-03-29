@@ -1,0 +1,25 @@
+WORK EXPERIENCES
+
+React / React Native Developer
+Myanmar Software Integrated Solutions Co., Ltd
+June 2023 - Present	
+Key Responsibilities:
+Develop and maintain web and mobile applications using React and React Native
+Work with REST APIs, and complex business logic
+Optimize app performance and UI responsiveness
+Deploy production-ready mobile apps (Android/iOS)
+Projects I had worked on - 
+Gold Plus - Htet Myat Yadanar (Web, Mobile App and Mini App on A+)
+DKSH Myanmar CMS (Web)
+Zapp Cashier - MM Invest (Mobile App)
+DigitalZay Mini App (on KBZpay)
+Toyota (Web)
+More & More Loyalty App (Mobile)
+Integrated Odoo attendance module with ZKTBioTime
+And other projects
+
+Frontend Developer
+Startup Singapore (Internship)
+Sep 2022 – Nov 2022	
+Learnt React Native
+Participated in developing School Management app

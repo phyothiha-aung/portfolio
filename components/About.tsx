@@ -1,13 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import PROFILE from "@/assets/images/profile.webp";
-import contact from "@/assets/data/contact";
 import { BiDownload } from "react-icons/bi";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { IoMail } from "react-icons/io5";
 
 const calculateAge = (
   birthYear: number,
   birthMonth: number,
-  birthDay: number = 1
+  birthDay: number = 1,
 ) => {
   const today = new Date();
   const birthDate = new Date(birthYear, birthMonth - 1, birthDay);
@@ -25,40 +26,34 @@ const About = () => {
 
   return (
     <section
-      id="about"
-      className="min-h-screen w-full flex items-center py-20 bg-neutral-950"
+      id="About"
+      className="w-full flex items-center py-17 min-h-dvh h-fit md:min-h-fit"
     >
       <div className="app-container mx-auto px-6">
-        <div className="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
-          <div className="relative group w-full max-w-[400px] aspect-square md:aspect-4/5 flex-1">
-            <div className="border-2 border-primary/20 rounded-3xl p-4 w-full h-full">
+        <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-12 xl:gap-20">
+          <div className="relative group w-[300px] max-w-[400px] flex-1">
+            <div className="border-2 border-primary/20 rounded-3xl aspect-square md:aspect-4/5 p-4">
               <Image
                 src={PROFILE}
                 alt="Phyo Thiha Aung"
                 priority
-                className="z-10 w-full h-full object-cover object-top rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500"
+                className="z-10 w-full h-full object-cover object-top rounded-2xl shadow-2xl transition-all duration-500"
               />
             </div>
           </div>
 
-          <div className="flex-1 text-white/80 space-y-6">
-            <div className="space-y-2">
-              <h2 className="text-primary text-sm font-mono tracking-widest uppercase">
-                Introduction
-              </h2>
-              <h3 className="text-3xl md:text-5xl font-bold text-white">
-                About Me
-              </h3>
-            </div>
+          <div className="flex-1 text-white/80 space-y-6 px-1 xl:px-5">
+            <h2 className="text-3xl md:text-5xl font-bold text-primary font-exo-2 uppercase">
+              About Me
+            </h2>
 
-            <div className="space-y-4 text-lg leading-relaxed">
+            <div className="space-y-4 text-base lg:text-lg leading-relaxed">
               <p>
                 My name is{" "}
                 <span className="text-white font-semibold">
                   Phyo Thiha Aung
                 </span>
-                , a {age}-year-old frontend developer based in Myanmar. With
-                over{" "}
+                , a {age}-year-old frontend developer from Myanmar. With over{" "}
                 <span className="text-primary font-medium">
                   three years of professional experience
                 </span>
@@ -82,7 +77,7 @@ const About = () => {
 
             <div className="flex flex-wrap gap-3 pt-4 items-center">
               <Link
-                href="/resume.pdf"
+                href="/phyo-thiha-aung-resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 title="download resume"
@@ -90,16 +85,33 @@ const About = () => {
               >
                 Resume <BiDownload size={18} />
               </Link>
-              {contact.splice(1, 3).map((item) => (
-                <Link
-                  href={item.href}
-                  key={item.name}
-                  title={item.name}
-                  className="w-10 aspect-square flex items-center justify-center"
-                >
-                  {item.icon()}
-                </Link>
-              ))}
+              <Link
+                href="https://github.com/phyothiha-aung"
+                title="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 aspect-square flex items-center justify-center text-white"
+              >
+                <FaGithub size={24} />
+              </Link>
+              <Link
+                href="https://www.linkedin.com/in/phyo-thiha-aung-8ab728273"
+                title="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 aspect-square flex items-center justify-center text-white"
+              >
+                <FaLinkedin size={24} />
+              </Link>
+              <Link
+                href="mailto:phyothihaaung.dev@gmail.com"
+                title="Email"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 aspect-square flex items-center justify-center text-white"
+              >
+                <IoMail size={26} />
+              </Link>
             </div>
           </div>
         </div>

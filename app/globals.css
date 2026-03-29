@@ -8,10 +8,30 @@
   --color-background: #0a0a0a;
   --color-primary: hsl(187 97.7% 65.9%);
   --color-secondary: hsl(7 60% 40%);
+  --color-accent: hsl(209 55.6% 54.1%);
 }
 
+@utility scrollbar-none {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+html,
 body {
   background-color: var(--color-background);
+  scroll-behavior: smooth;
+}
+
+.font-exo-2 {
+  font-family: var(--font-exo-2), sans-serif;
+}
+
+.font-open-sans {
+  font-family: var(--font-open-sans), sans-serif;
 }
 
 .app-container {

@@ -3,14 +3,17 @@ import Sparkle from "./Sparkle";
 import ScrollIndicator from "./ScrollIndicator";
 
 const badges = [
-  { name: "TypeScript", href: "https://www.typescriptlang.org/" },
   { name: "React", href: "https://react.dev/" },
   { name: "React Native", href: "https://reactnative.dev/" },
+  { name: "TypeScript", href: "https://www.typescriptlang.org/" },
 ];
 
 const Hero = () => {
   return (
-    <section className="min-h-dvh pt-17 flex flex-col items-center justify-center px-5">
+    <section
+      id="Home"
+      className="h-dvh xl:max-h-[800px] relative py-17 flex flex-col items-center justify-center px-5"
+    >
       <div className="w-full max-w-[1000px] flex items-center justify-center">
         <div className="w-1/8 flex flex-col justify-center items-center md:pr-8">
           <div className="h-7 w-7 rounded-full bg-primary" />

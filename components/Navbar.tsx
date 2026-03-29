@@ -1,18 +1,13 @@
-import Link from "next/link";
+"use client";
+import { Link } from "react-scroll";
 
-const links = [
-  { href: "/", label: "Home" },
-  { href: "#about", label: "About" },
-  { href: "#experience", label: "Experience" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-];
+const links = ["Home", "About", "Experience", "Projects", "Skills"];
 
 const Navbar = () => {
   return (
     <div className="w-full fixed bg-background z-50">
       <nav className="app-container h-17 flex items-center justify-between top-0">
-        <Link href="/" className="logo">
+        <Link to="Home" spy={true} smooth={true} className="logo">
           <div className="circle" />
           <div className="text" aria-label="Phyo Thiha Aung">
             <span className="front" aria-hidden>
@@ -27,12 +22,15 @@ const Navbar = () => {
         <ul className="nav-item-group">
           {links.map((item) => (
             <Link
-              href={item.href}
-              key={item.href}
-              aria-label={item.label}
+              key={item}
+              to={item}
+              spy={true}
+              smooth={true}
+              aria-label={item}
               className="nav-item"
+              activeClass="active"
             >
-              {item.label}
+              {item}
             </Link>
           ))}
         </ul>
