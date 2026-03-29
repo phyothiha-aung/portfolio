@@ -1,7 +1,7 @@
 "use client";
 import { Link } from "react-scroll";
 
-const links = ["Home", "About", "Experience", "Projects", "Skills"];
+const links = ["Home", "About", "Experience", "Projects", "Skills", "Contact"];
 
 const Navbar = () => {
   return (
@@ -25,7 +25,6 @@ const Navbar = () => {
               key={item}
               to={item}
               spy={true}
-              smooth={true}
               aria-label={item}
               className="nav-item"
               activeClass="active"

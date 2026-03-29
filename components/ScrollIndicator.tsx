@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import Link from "next/link";
+import { Link } from "react-scroll";
 
 const ScrollIndicator = () => {
   const [hidden, setHidden] = useState(false);
@@ -17,9 +17,9 @@ const ScrollIndicator = () => {
 
   return (
     <Link
-      href="#about"
+      to="About"
       title="Scroll to About Section"
-      className={`scroller transition-opacity duration-300 ${
+      className={`scroller cursor-pointer transition-opacity duration-300 ${
         hidden ? "opacity-0 pointer-events-none" : "opacity-100"
       }`}
     />

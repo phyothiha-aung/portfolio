@@ -122,7 +122,7 @@ svg.my-name path {
   stroke-width: 0.1;
   stroke-dasharray: 66;
   stroke-dashoffset: 66;
-  animation: name-animation 3s ease-in-out forwards;
+  animation: name-animation 4s ease-in-out forwards;
 }
 
 @keyframes name-animation {

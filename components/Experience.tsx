@@ -6,7 +6,7 @@ const Experience = () => {
           Experience
         </h2>
 
-        <div className="relative mx-auto max-w-360 w-full mt-8">
+        <div className="relative w-full mt-8">
           <div className="w-0.5 h-[calc(100%-0.8rem)] bg-primary/80 absolute left-3 md:left-1/2 md:-translate-x-1/2 bottom-0" />
 
           <div className="relative flex flex-col md:flex-row justify-start md:justify-center gap-1 md:gap-16">
