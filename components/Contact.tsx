@@ -58,7 +58,7 @@ const Contact = () => {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col max-w-160 mx-auto w-full p-4 sm:p-8 border border-primary mt-15 rounded-lg text-white"
+          className="flex flex-col max-w-160 mx-auto w-full p-4 sm:p-8 border border-primary mt-14 rounded-lg text-white"
         >
           <input
             className={`bg-transparent p-2 outline-none border-b border-primary ${errors.name ? "border-red-500" : ""} placeholder:text-gray-600`}
@@ -117,7 +117,7 @@ const Contact = () => {
 
           <textarea
             className={`mt-4 bg-transparent p-2 outline-none border-b ${errors.message ? "border-red-500" : "border-primary"} placeholder:text-gray-600 `}
-            rows={6}
+            rows={3}
             placeholder="Message"
             autoComplete="off"
             {...register("message", {

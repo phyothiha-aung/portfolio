@@ -27,7 +27,7 @@ const About = () => {
   return (
     <section
       id="About"
-      className="w-full flex items-center py-17 min-h-dvh h-fit md:min-h-fit"
+      className="w-full flex items-center py-17 min-h-dvh h-fit 2xl:min-h-fit"
     >
       <div className="app-container mx-auto px-6">
         <div className="flex flex-col md:flex-row items-center gap-8 lg:gap-12 xl:gap-20">
