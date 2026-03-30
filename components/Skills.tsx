@@ -1,5 +1,6 @@
 import { nextSkillsData, skillsData } from "@/assets/data/skills";
 import Image from "next/image";
+import Link from "next/link";
 
 const Skills = () => {
   return (
@@ -13,16 +14,21 @@ const Skills = () => {
             These are the technologies I have worked with
           </h3>
 
-          <div className="w-full grid grid-cols-2 min-[500px]:grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 text-center py-5">
+          <div className="w-full grid grid-cols-2 min-[500px]:grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 text-center py-5 justify-items-center">
             {skillsData.map((skill) => (
-              <div key={skill.id} className="">
+              <Link
+                href={skill.href}
+                target="_blank"
+                key={skill.id}
+                className="w-fit"
+              >
                 <Image
                   className="w-20 rounded-md mx-auto aspect-square object-contain hover:scale-110 duration-500"
                   src={skill.image}
                   alt={`${skill.name} icon`}
                 />
                 <p className="my-4 text-white">{skill.name}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
@@ -31,16 +37,21 @@ const Skills = () => {
             I am currently learning
           </h3>
 
-          <div className="w-full grid grid-cols-2 min-[500px]:grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 text-center py-6">
+          <div className="w-full grid grid-cols-2 min-[500px]:grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-4 text-center py-6 justify-items-center">
             {nextSkillsData.map((skill) => (
-              <div key={skill.id} className="">
+              <Link
+                href={skill.href}
+                target="_blank"
+                key={skill.id}
+                className="w-fit"
+              >
                 <Image
                   className="w-20 mx-auto aspect-square object-contain hover:scale-110 duration-500"
                   src={skill.image}
                   alt={`${skill.name} icon`}
                 />
                 <p className="my-4 text-white">{skill.name}</p>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
