@@ -2,9 +2,6 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Open_Sans, Exo_2 } from "next/font/google";
 import Navbar from "@/components/Navbar";
-import gsap from "gsap";
-import { ScrollSmoother } from "gsap/ScrollSmoother";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 export const metadata: Metadata = {
   title: {
@@ -35,8 +32,6 @@ const exo2 = Exo_2({
   fallback: ["system-ui", "sans-serif"],
   variable: "--font-exo-2",
 });
-
-gsap.registerPlugin(ScrollSmoother, ScrollTrigger);
 
 export default function RootLayout({
   children,

@@ -243,3 +243,24 @@ ul.badge-container {
     display: none;
   }
 }
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-background) inset !important;
+  background-color: var(--color-background);
+  color: var(--color-white) !important;
+  -webkit-text-fill-color: var(--color-white) !important;
+  caret-color: var(--color-white);
+  transition: all 9999s ease-in-out 0s;
+}
+
+@keyframes shrink {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0%;
+  }
+}
