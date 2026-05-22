@@ -10,6 +10,15 @@ export const metadata: Metadata = {
   },
   description:
     "Phyo Thiha Aung is a Frontend developer with 3+ years experience in React, Next.js, React Native, and modern UI development.",
+  appleWebApp: {
+    capable: true,
+    title: "Phyo Thiha Aung",
+    statusBarStyle: "default",
+  },
+  metadataBase: new URL(process.env.NEXT_PUBLIC_BASE_URL!),
+  alternates: {
+    canonical: "/",
+  },
   verification: {
     google: "200xp3Mw8naByKFhXJ5bvqozTHHipljwTYkM6JYkRp0",
   },
