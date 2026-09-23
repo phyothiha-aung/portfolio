@@ -42,12 +42,12 @@ const projects = [
     links: [
       {
         name: "Android",
-        href: "https://play.google.com/store/apps/details?id=com.moreandmore.member",
+        href: "https://play.google.com/store/apps/details?id=com.yadanarmore.app",
         icon: <FaAndroid size={22} />,
       },
       {
         name: "iOS",
-        href: "https://apps.apple.com/my/app/more-and-more-member/id6443899996",
+        href: "https://apps.apple.com/my/app/more-more-member-2-0/id6757374862",
         icon: <FaApple size={22} />,
       },
     ],
@@ -120,7 +120,7 @@ const projects = [
     links: [
       {
         name: "Website",
-        href: "https://play.google.com/store/apps/details?id=com.moreandmore.member",
+        href: "https://toyota-ayeandsons.com/",
         icon: <GiWorld size={22} />,
       },
     ],
