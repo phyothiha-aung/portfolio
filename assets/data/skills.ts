@@ -88,21 +88,21 @@ export const skillsData = [
     image: FRAMER,
     href: "https://www.framer.com/motion/",
   },
-];
-
-export const nextSkillsData = [
   {
-    id: "skill1",
+    id: "skill13",
     name: "NestJs",
     image: NEST,
     href: "https://nestjs.com/",
   },
   {
-    id: "skill2",
+    id: "skill14",
     name: "GSAP",
     image: GSAP,
     href: "https://gsap.com/",
   },
+];
+
+export const nextSkillsData = [
   {
     id: "skill3",
     name: "WebGL",
