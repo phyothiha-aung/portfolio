@@ -22,7 +22,7 @@ const calculateAge = (
 };
 
 const About = () => {
-  const age = calculateAge(1999, 12, 6);
+  const age = calculateAge(1999, 8, 14);
 
   return (
     <section
