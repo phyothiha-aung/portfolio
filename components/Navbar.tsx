@@ -62,7 +62,7 @@ const Navbar = () => {
         <button
           ref={buttonRef}
           onClick={() => setIsOpen(!isOpen)}
-          className="md:hidden text-2xl cursor-pointer text-primary"
+          className="sm:hidden text-2xl cursor-pointer text-primary"
         >
           <MenuIcon isOpen={isOpen} />
         </button>
